@@ -1,0 +1,17 @@
+Package: HermannPres
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ryan",
+           family = "Hermann",
+           role = c("aut", "cre"),
+           email = "ryanhermannbusiness@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package is designed to allow simple basic ggplot2
+    visualizations to be converted into more presentation ready graphics without
+    the intimate coding used within the theme and guides commands.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
