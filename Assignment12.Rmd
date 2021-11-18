@@ -1,0 +1,44 @@
+---
+title: "RMarkdownPrac"
+author: "Ryan Hermann"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+
+I am transforming the base R Markdown file into one for this assignment. Below I am reading in the mtcars dataset. And gaining a summary of it, should this be a more official program I would describe what I notice about the data and how to create a plot with it.
+
+```{r cars}
+library(ggplot2)
+workdata<-mtcars
+summary(mtcars)
+
+```
+
+## Creating My Own Code Chunk
+Below is a code chunk I created myself in order to familairize myself with the process of doing so. I also create a simple graph output.  
+```{r graphmaker}
+ggplot(data = workdata, aes(x= mpg, y=disp))+
+  geom_point()
+
+
+```
+
+## Hiding Code
+In the following code chunk I will use *echo = FALSE* to hide the code of the plot while increasing the complexity of the graph. This allows me to create a markdown file with more robust visualizations that is not cluttered with lines of excess code.  
+
+```{r robustgraph, echo=FALSE}
+ggplot(data = workdata, aes(x= mpg, y=disp, size = 2, color = hp))+
+  geom_point()+ guides(size = FALSE, color = guide_legend(title = "HP"))+
+  ggtitle("Dispersal Over Miles Per Gallon") +theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+```
+
+
